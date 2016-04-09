@@ -1,5 +1,7 @@
+var path = require('path');
+
 module.exports = {
-  context: __dirname + '/src',
+  context: path.join(__dirname, 'src'),
   entry: './js/scripts.js',
 	resolve: {
 		alias: {
@@ -22,8 +24,9 @@ module.exports = {
 		]
     },
 	output: {
-    path: __dirname + '/dist',
-		filename: "scripts.min.js"
+    filename: "scripts.min.js",
+    path: path.join(__dirname, 'dist'),
+    publicPath: '/dist/'
 	}
 
 };

@@ -6,7 +6,7 @@ import { Paper } from 'material-ui';
 const dashletCols = 6;
 
 const dashletStyle = {
-  height: 250,
+  height: 300,
   width: '100%',
   marginTop: '30px',
   padding: 5,

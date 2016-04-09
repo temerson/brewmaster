@@ -1,12 +1,12 @@
 import React from "react";
 
-import Footer from "./Footer.js"
 import Header from "./Header.js"
 import Navigation from "./Navigation.js"
-import Dashboard from "./Dashboard.js"
+import Recipes from "./Recipes.js"
 
 const contentStyle = {
-	paddingLeft: "150px"
+	paddingLeft: "165px",
+	paddingTop: "69px"
 };
 
 export default class Layout extends React.Component {
@@ -17,8 +17,7 @@ export default class Layout extends React.Component {
 				<div>
 					<Navigation />
 					<div style={contentStyle} className="content">
-						<Dashboard />
-						<Footer />
+						<Recipes />
 					</div>
 				</div>
 			</div>
