@@ -1,25 +1,22 @@
 import React from "react";
 
-import { Paper } from 'material-ui'
+import { Card, CardActions, CardHeader, CardText, FlatButton } from 'material-ui'
 
-const recipeStyle = {
-  height: 75,
-  width: '80%',
-  margin: 'auto',
-  padding: 10
-}
+const Recipe = () => (
+  <Card>
+    <CardHeader
+      title="Blackberry Melomel"
+      subtitle="7/10"
+      actAsExpander={true}
+      showExpandableButton={true} />
+    <CardText expandable={true}>
+      Two parts blackberry, one part honey
+    </CardText>
+    <CardActions expandable={true}>
+      <FlatButton label="Edit" />
+    </CardActions>
+  </Card>
+);
 
-export default class Recipe extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      open: true
-    }
-  }
 
-	render() {
-		return (
-      <Paper style={recipeStyle} zDepth={1}>recipe</Paper>
-		);
-	}
-}
+export default Recipe;

@@ -5,8 +5,7 @@ import Navigation from "./Navigation.js"
 import Recipes from "./Recipes.js"
 
 const contentStyle = {
-	paddingLeft: "165px",
-	paddingTop: "69px"
+	padding: "75px 10px 0 165px"
 };
 
 export default class Layout extends React.Component {
