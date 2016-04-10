@@ -2,17 +2,21 @@ import React from "react";
 
 import { Card, CardActions, CardHeader, CardText, FlatButton } from 'material-ui'
 
+import Ingredients from './Ingredients.js'
+
+const recipeStyle = {
+  margin: '15px 0'
+}
+
 const Recipe = () => (
-  <Card>
+  <Card style={recipeStyle}>
     <CardHeader
       title="Blackberry Melomel"
-      subtitle="7/10"
-      actAsExpander={true}
-      showExpandableButton={true} />
-    <CardText expandable={true}>
-      Two parts blackberry, one part honey
+      subtitle="7/10"/>
+    <CardText>
+      <Ingredients />
     </CardText>
-    <CardActions expandable={true}>
+    <CardActions>
       <FlatButton label="Edit" />
     </CardActions>
   </Card>
