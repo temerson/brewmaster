@@ -8,19 +8,24 @@ const recipeStyle = {
   margin: '15px 0'
 }
 
-const Recipe = () => (
-  <Card style={recipeStyle}>
-    <CardHeader
-      title="Blackberry Melomel"
-      subtitle="7/10"/>
-    <CardText>
-      <Ingredients />
-    </CardText>
-    <CardActions>
-      <FlatButton label="Edit" />
-    </CardActions>
-  </Card>
-);
+class Recipe extends React.Component {
+  render() {
+    const { recipe } = this.props;
 
+    return (
+      <Card style={recipeStyle}>
+        <CardHeader
+          title={recipe.name}
+          subtitle="7/10"/>
+        <CardText>
+          <Ingredients ingredients={recipe.ingredients} />
+        </CardText>
+        <CardActions>
+          <FlatButton label="Edit" />
+        </CardActions>
+      </Card>
+    );
+  }
+}
 
 export default Recipe;
