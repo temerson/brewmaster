@@ -2,7 +2,7 @@ var path = require('path');
 
 module.exports = {
   context: path.join(__dirname, 'src'),
-  entry: './js/scripts.js',
+  entry: './scripts.js',
 	resolve: {
 		alias: {
 			'less': './less',

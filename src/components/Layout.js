@@ -1,9 +1,9 @@
 import React from "react";
 
-import Header from "./Header.js"
-import Navigation from "./Navigation.js"
-import Recipes from "./Recipes.js"
-import Routes from "./Routes.js"
+import Header from "./Header"
+import Navigation from "./Navigation"
+import Recipes from "./Recipes"
+import Routes from "./Routes"
 
 
 const contentStyle = {

@@ -1,9 +1,11 @@
 {
   "name": "brewmaster",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.1.0",
+  "description": "For tracking the brews",
+  "repository": "https://github.com/temerson/brewmaster",
   "main": "index.js",
   "dependencies": {
+    "bluebird": "^3.3.5",
     "events": "^1.1.0",
     "flux": "^2.1.1",
     "history": "^1.17.0",
@@ -23,9 +25,13 @@
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
     "babel-preset-stage-0": "^6.3.13",
+    "chai": "^3.5.0",
     "css-loader": "^0.23.1",
+    "enzyme": "^2.2.0",
     "extract-text-webpack-plugin": "^1.0.1",
+    "mocha": "^2.4.5",
     "node-sass": "^3.4.2",
+    "react-addons-test-utils": "^15.0.1",
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.9",
@@ -34,8 +40,9 @@
   "scripts": {
     "dev": "webpack-dev-server --inline --hot --port 8080 --host 0.0.0.0",
     "clean_node": "rimraf node_modules",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --require babel-core/register",
+    "test:watch": "npm test -- --watch"
   },
-  "author": "",
+  "author": "Tristan Emerson",
   "license": "ISC"
 }
