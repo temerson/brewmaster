@@ -2,12 +2,12 @@ import React from "react";
 
 import { browserHistory, IndexRoute, Router, Route } from "react-router";
 
-import Dashboard from "./Dashboard"
-import Layout from "./Layout"
-import Log from "./Log"
-import Recipes from "./Recipes"
+import { Layout } from "./"
+import Dashboard from "../components/Dashboard"
+import Log from "../components/Log"
+import { Recipes } from "recipes"
 
-export default class Routes extends React.Component {
+class Routes extends React.Component {
 	render() {
 		return (
       <Router history={browserHistory}>
@@ -21,3 +21,4 @@ export default class Routes extends React.Component {
 		);
 	}
 }
+export default Routes;

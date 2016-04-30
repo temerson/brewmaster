@@ -1,9 +1,7 @@
 import React from "react";
 
-import Header from './Header'
-import Navigation from './Navigation'
-import Recipes from './Recipes'
-import Routes from './Routes'
+import Header from './Header';
+import Navigation from './Navigation';
 
 const contentStyle = {
 	padding: "75px 10px 0 165px"

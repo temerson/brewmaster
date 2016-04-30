@@ -4,7 +4,8 @@ module.exports = {
   context: path.join(__dirname, 'src'),
   entry: './scripts.js',
 	resolve: {
-		extensions: ['', '.js', '.jsx']
+    root: path.join(__dirname, 'src'),
+		extensions: ['', '.js', '.jsx'],
 	},
   module: {
     loaders: [

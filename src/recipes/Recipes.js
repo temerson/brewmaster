@@ -1,8 +1,7 @@
 import React from "react";
-
 import { Card, CardActions, CardHeader, CardText, FlatButton } from 'material-ui'
 
-import Ingredients from './Ingredients.js'
+import { Ingredients } from './'
 
 const recipeStyle = {
   margin: '15px 0'
@@ -28,4 +27,28 @@ class Recipe extends React.Component {
   }
 }
 
-export default Recipe;
+
+class Recipes extends React.Component {
+	constructor() {
+		super();
+		this.state = {
+      recipes: []
+    };
+	}
+
+	render() {
+		const { recipes } = this.state;
+
+		const RecipeComponents = recipes.map((item) => {
+			return <Recipe key={item.id} recipe={item} />
+		});
+
+		return (
+      <div>
+				{RecipeComponents}
+      </div>
+		);
+	}
+}
+
+export default Recipes;

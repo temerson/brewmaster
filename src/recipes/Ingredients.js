@@ -2,7 +2,7 @@ import React from "react";
 
 import { Input } from 'react-bootstrap';
 
-export default class Ingredient extends React.Component {
+class Ingredient extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -26,3 +26,19 @@ export default class Ingredient extends React.Component {
     }
 	}
 }
+
+class Ingredients extends React.Component {
+	render() {
+		const { ingredients } = this.props;
+
+		return (
+      <ul>
+				{ingredients.map((item) => {
+					return <li key={item.id}><Ingredient ingredient={item} /></li>
+				})}
+      </ul>
+		);
+	}
+}
+
+export default Ingredients;
